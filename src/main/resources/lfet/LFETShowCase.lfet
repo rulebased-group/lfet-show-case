@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LFET version="LF-ET 2.1.5 (210417a)" language="German" saveDate="2021.06.14 at 09:16:23 CEST" saveUser="constantin">
+  <Conditions>
+    <Condition uId="11446800829457960">
+      <Title language="German" value="Regelgruppe ?"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16233987274896876">
+          <Symbol language="German" value="1"/>
+          <Title language="German" value="Alter"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16233998436077920">
+          <Symbol language="German" value="2"/>
+          <Title language="German" value="Tarif"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16233987274916878">
+          <Symbol language="German" value="3"/>
+          <Title language="German" value="Ende"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="16233989861617190">
+      <Title language="German" value="Alter ?"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16233989995627243">
+          <Symbol language="German" value="&lt;= 6"/>
+          <Title language="German" value="[ 0 : 6 ]"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16233991985507448">
+          <Symbol language="German" value="7-15"/>
+          <Title language="German" value="] 6 : 15 ]"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16233993651617451">
+          <Symbol language="German" value="16-65"/>
+          <Title language="German" value="] 15 : 65 ]"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16233989995647245">
+          <Symbol language="German" value="*"/>
+          <Title language="German" value="Sonst"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+    <Condition uId="16233997873567668">
+      <Title language="German" value="Abgeschlossener Tarif ?"/>
+      <ConditionOccurrences>
+        <ConditionOccurrence uId="16233998006697749">
+          <Symbol language="German" value="ZE"/>
+          <Title language="German" value="Zahnersatz"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16233998006717751">
+          <Symbol language="German" value="ZB"/>
+          <Title language="German" value="Zahnbehandlung"/>
+        </ConditionOccurrence>
+        <ConditionOccurrence uId="16233998195087756">
+          <Symbol language="German" value="*"/>
+          <Title language="German" value="Sonst"/>
+        </ConditionOccurrence>
+      </ConditionOccurrences>
+    </Condition>
+  </Conditions>
+  <Actions>
+    <Action uId="16233999970228221">
+      <Title language="German" value="Meldung"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16234000110758329">
+          <Symbol language="German" value="F001"/>
+          <Title language="German" value="Alter ungültig: Gültige Werte sind 0 bis 65"/>
+          <Text language="German" value="Bitte geben Sie ein gültiges Alter ein,&lt;br/&gt;zulässig sind Werte zwischen 0 und 65."/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16234004166558775">
+          <Symbol language="German" value="F002"/>
+          <Title language="German" value="Tarif ungültig"/>
+          <Text language="German" value="Bitte geben Sie einen gültigen Tarif ein, zulässig sind hier:&lt;br/&gt;- Zahnersatz&lt;br/&gt;- Zahnbehandlung"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+    <Action uId="11446800829627977">
+      <Title language="German" value="Weiter mit Regelgruppe"/>
+      <ActionOccurrences>
+        <ActionOccurrence uId="16233987651286952">
+          <Symbol language="German" value="+"/>
+          <Title language="German" value="weiter mit nächster Regelgruppe"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16234000622758430">
+          <Symbol language="German" value="1"/>
+          <Title language="German" value="Alter"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16234044740303007">
+          <Symbol language="German" value="2"/>
+          <Title language="German" value="Tarif"/>
+        </ActionOccurrence>
+        <ActionOccurrence uId="16233988603957033">
+          <Symbol language="German" value="ex"/>
+          <Title language="German" value="Exit, Ende dieser Verarbeitung (Entscheidungstabelle)"/>
+        </ActionOccurrence>
+      </ActionOccurrences>
+    </Action>
+  </Actions>
+  <Rules lastId="19">
+    <Rule id="6">
+      <ConditionOccurrenceLink link="16233987274896876"/>
+      <ActionOccurrenceLink link="16233987651286952"/>
+      <ConditionOccurrenceLink link="16233989995627243"/>
+    </Rule>
+    <Rule id="7">
+      <ConditionOccurrenceLink link="16233987274896876"/>
+      <ActionOccurrenceLink link="16233987651286952"/>
+      <ConditionOccurrenceLink link="16233991985507448"/>
+    </Rule>
+    <Rule id="8">
+      <ConditionOccurrenceLink link="16233987274896876"/>
+      <ActionOccurrenceLink link="16233987651286952"/>
+      <ConditionOccurrenceLink link="16233993651617451"/>
+    </Rule>
+    <Rule id="18">
+      <ConditionOccurrenceLink link="16233987274896876"/>
+      <ActionOccurrenceLink link="16233987651286952"/>
+      <ConditionOccurrenceLink link="16233989995647245"/>
+      <ActionOccurrenceLink link="16234000110758329"/>
+    </Rule>
+    <Rule id="10">
+      <ConditionOccurrenceLink link="16233998436077920"/>
+      <ConditionOccurrenceLink link="16233998006697749"/>
+      <ActionOccurrenceLink link="16233987651286952"/>
+    </Rule>
+    <Rule id="11">
+      <ConditionOccurrenceLink link="16233998436077920"/>
+      <ConditionOccurrenceLink link="16233998006717751"/>
+      <ActionOccurrenceLink link="16233987651286952"/>
+    </Rule>
+    <Rule id="19">
+      <ConditionOccurrenceLink link="16233998436077920"/>
+      <ConditionOccurrenceLink link="16233998195087756"/>
+      <ActionOccurrenceLink link="16233987651286952"/>
+      <ActionOccurrenceLink link="16234004166558775"/>
+    </Rule>
+    <Rule id="5">
+      <ConditionOccurrenceLink link="16233987274916878"/>
+      <ActionOccurrenceLink link="16233988603957033"/>
+    </Rule>
+  </Rules>
+  <Title language="German" value="Online-Abschluss"/>
+  <UrlsOut>
+    <Url title="Ordner" url="file:///./"/>
+  </UrlsOut>
+</LFET>

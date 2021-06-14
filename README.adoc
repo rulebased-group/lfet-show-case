@@ -1,0 +1,15 @@
+:java-source-dir: src/main/java
+= LFET Demo Showcase
+
+Minimaler LFET Showcase auf Basis einer Sprint Boot Webanwendung.
+Anwendung kann wie folgt gestartet werden: `mvn verify spring-boot:run`.
+Die Anwendung ist unter http://localhost:8080 erreichbar.
+
+
+
+Die Implementierung der LFET erfolgt in der Klasse `LFETShowCaseService.java` im Package `de.lfet.demo.application`.
+
+[source, java]
+----
+include::{java-source-dir}/de/lfet/demo/application/LFETShowCaseService.java[tags=showCaseService]
+----
